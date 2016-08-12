@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+        <script type="text/javascript" src="d3.v3.js"></script>
+    </head>
+    <body>
+    <script>
+     var data = [10];
+    var canvas = d3.select("body")
+    				.append("svg")
+    				.attr("width",1500)
+    				.attr("height",1500)
+
+    var circle1 = canvas.append("circle")
+    					.attr("cx",50)
+    					.attr("cy",50)
+    					.attr("fill","green")
+    					.attr("r",25);
+	var circle2 = canvas.append("circle")
+    					.attr("cx",950)
+    					.attr("cy",50)
+    					.attr("fill","red")
+    					.attr("r",25);
+	var circle3 = canvas.append("circle")
+    					.attr("cx",475)
+    					.attr("cy",50)
+    					.attr("fill","blue")
+    					.attr("r",25);
+	var circle4 = canvas.append("circle")
+    					.attr("cx",50)
+    					.attr("cy",475)
+    					.attr("fill","yellow")
+    					.attr("r",25);
+	var circle5 = canvas.append("circle")
+    					.attr("cx",50)
+    					.attr("cy",950)
+    					.attr("fill","orange")
+    					.attr("r",25);
+	var circle6 = canvas.append("circle")
+    					.attr("cx",475)
+    					.attr("cy",950)
+    					.attr("fill","black")
+    					.attr("r",25);
+	var circle7 = canvas.append("circle")
+    					.attr("cx",950)
+    					.attr("cy",950)
+    					.attr("fill","violet")
+    					.attr("r",25);
+	var circle8 = canvas.append("circle")
+    					.attr("cx",950)
+    					.attr("cy",475)
+    					.attr("fill","brown")
+    					.attr("r",25);
+
+var circles = canvas.selectAll("circle")
+					.transition()
+					.duration(1500)
+		    		.delay(1000)
+		    		.attr("cx",500)
+		    		.attr("cy",500)
+		    		.each("end", function () {
+		    			d3.select(this).attr("fill","red");
+		    		});
+/*
+   circle1.transition()
+    		.duration(1500)
+    		.delay(1000)
+    		.attr("cx",500)
+    		.attr("cy",500);
+ /*   circle2.transition()
+    		.duration(1500)
+    		.delay(1000)
+    		.attr("cx",500)
+    		.attr("cy",500);
+	circle3.transition()
+    		.duration(1500)
+    		.delay(1000)
+    		.attr("cx",500)
+    		.attr("cy",500);
+*/    
+    </script>
+
+    </body>
+</html>
